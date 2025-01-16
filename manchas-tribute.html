@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manchas - The Urban Towers Cat</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-blue-100 to-blue-200 min-h-screen">
+    <script>
+        const languageNames = {
+            'es': 'Español',
+            'de': 'Deutsch',
+            'en': 'English'
+        };
+        
+        const content = {
+            "es": {
+                "title": "Manchas - El Gato de Urban Towers",
+                "nav": {
+                    "title": "🐱 Manchas"
+                },
+                "hero": {
+                    "title": "Conoce a Manchas",
+                    "subtitle": "El Querido Gato de Urban Towers, Playa del Carmen"
+                },
+                "paradise": {
+                    "title": "Vida en el Paraíso",
+                    "description": "Viviendo el sueño en Playa del Carmen, Manchas llama hogar a Urban Towers. Con la brisa del Caribe en sus bigotes y el sol mexicano calentando sus manchas, ha dominado el arte de la vida tropical.",
+                    "location": "Ubicación: Urban Towers",
+                    "lifestyle": "Estilo de vida: Gato de Playa"
+                },
+                "adventures": {
+                    "title": "Aventuras Diarias",
+                    "items": [
+                        "🛋️ Descansando en el lobby",
+                        "👋 Saludando a los residentes",
+                        "😴 Durmiendo la siesta en lugares soleados",
+                        "🎮 Jugando con los visitantes"
+                    ]
+                },
+                "gallery": {
+                    "title": "Vida en Urban Towers",
+                    "photos": [
+                        {"caption": "Siesta de la tarde"},
+                        {"caption": "Supervisor del lobby"},
+                        {"caption": "Mirando por la ventana"}
+                    ]
+                },
+                "fanClub": {
+                    "title": "Club de Fans de Manchas",
+                    "description": "¡Únete a la comunidad de residentes y visitantes que se han enamorado de nuestra mascota de Urban Towers!",
+                    "subtitle": "Querido por todos en Urban Towers"
+                },
+                "vote": {
+                    "title": "¡Vota por Manchas para Presidente!",
+                    "description": "Un líder con visión felina para un México mejor. Manchas promete siestas para todos y atún gratuito.",
+                    "button": "¡Votar por Manchas!",
+                    "popover": {
+                        "title": "¡Gracias por tu Voto!",
+                        "message": "¡Gracias por tu voto! Juntos haremos historia 🐱🇲🇽",
+                        "close": "Cerrar"
+                    }
+                },
+                "support": {
+                    "title": "Ayuda a Manchas",
+                    "description": "Tu donación ayudará a mantener a Manchas con el mejor atún y los juguetes más divertidos.",
+                    "button": "Donar a Manchas"
+                },
+                "footer": {
+                    "love": "Hecho con 💖 para Manchas, el corazón de ",
+                    "studio": "Third Strand Studio"
+                }
+            },
+            "de": {
+                "title": "Manchas - Die Katze von Urban Towers",
+                "nav": {
+                    "title": "🐱 Manchas"
+                },
+                "hero": {
+                    "title": "Lernen Sie Manchas kennen",
+                    "subtitle": "Die beliebte Katze der Urban Towers, Playa del Carmen"
+                },
+                "paradise": {
+                    "title": "Leben im Paradies",
+                    "description": "Manchas lebt den Traum in Playa del Carmen und nennt Urban Towers sein Zuhause. Mit der karibischen Brise in seinen Barthaaren und der mexikanischen Sonne, die seine Flecken wärmt, hat er die Kunst des tropischen Lebens gemeistert.",
+                    "location": "Standort: Urban Towers",
+                    "lifestyle": "Lebensstil: Strandkatze"
+                },
+                "adventures": {
+                    "title": "Tägliche Abenteuer",
+                    "items": [
+                        "🛋️ Entspannen in der Lobby",
+                        "👋 Bewohner begrüßen",
+                        "😴 Nickerchen an sonnigen Plätzen",
+                        "🎮 Spielen mit Besuchern"
+                    ]
+                },
+                "gallery": {
+                    "title": "Leben in den Urban Towers",
+                    "photos": [
+                        {"caption": "Nachmittagssiesta"},
+                        {"caption": "Lobby-Aufseher"},
+                        {"caption": "Fensterbeobachtung"}
+                    ]
+                },
+                "fanClub": {
+                    "title": "Manchas Fanclub",
+                    "description": "Werden Sie Teil der Gemeinschaft von Bewohnern und Besuchern, die sich in unser Urban Towers Maskottchen verliebt haben!",
+                    "subtitle": "Geliebt von allen in Urban Towers"
+                },
+                "vote": {
+                    "title": "Wählen Sie Manchas zum Präsidenten!",
+                    "description": "Ein Anführer mit feliner Vision für ein besseres Mexiko. Manchas verspricht Nickerchen für alle und kostenlosen Thunfisch.",
+                    "button": "Für Manchas stimmen!",
+                    "popover": {
+                        "title": "Danke für Ihre Stimme!",
+                        "message": "Danke für Ihre Stimme! Gemeinsam schreiben wir Geschichte 🐱🇲🇽",
+                        "close": "Schließen"
+                    }
+                },
+                "support": {
+                    "title": "Helfen Sie Manchas",
+                    "description": "Ihre Spende hilft, Manchas mit bestem Thunfisch und den unterhaltsamsten Spielzeugen zu versorgen.",
+                    "button": "An Manchas spenden"
+                },
+                "footer": {
+                    "love": "Mit 💖 gemacht für Manchas, das Herz von ",
+                    "studio": "Third Strand Studio"
+                }
+            },
+            "en": {
+                "title": "Manchas - The Urban Towers Cat",
+                "nav": {
+                    "title": "🐱 Manchas"
+                },
+                "hero": {
+                    "title": "Meet Manchas",
+                    "subtitle": "The Beloved Cat of Urban Towers, Playa del Carmen"
+                },
+                "paradise": {
+                    "title": "Life in Paradise",
+                    "description": "Living the dream in Playa del Carmen, Manchas calls Urban Towers home. With the Caribbean breeze in his whiskers and the Mexican sun warming his spots, he's mastered the art of tropical living.",
+                    "location": "Location: Urban Towers",
+                    "lifestyle": "Lifestyle: Beach Cat"
+                },
+                "adventures": {
+                    "title": "Daily Adventures",
+                    "items": [
+                        "🛋️ Lounging in the lobby",
+                        "👋 Greeting residents",
+                        "😴 Napping in sunny spots",
+                        "🎮 Playing with visitors"
+                    ]
+                },
+                "gallery": {
+                    "title": "Life at Urban Towers",
+                    "photos": [
+                        {"caption": "Afternoon siesta"},
+                        {"caption": "Lobby supervisor"},
+                        {"caption": "Window watching"}
+                    ]
+                },
+                "fanClub": {
+                    "title": "Manchas Fan Club",
+                    "description": "Join the community of residents and visitors who've fallen in love with our Urban Towers mascot!",
+                    "subtitle": "Beloved by all at Urban Towers"
+                },
+                "vote": {
+                    "title": "Vote Manchas for President!",
+                    "description": "A leader with feline vision for a better Mexico. Manchas promises naps for everyone and free tuna.",
+                    "button": "Vote for Manchas!",
+                    "popover": {
+                        "title": "Thank You for Your Vote!",
+                        "message": "Thank you for your vote! Together we'll make history 🐱🇲🇽",
+                        "close": "Close"
+                    }
+                },
+                "support": {
+                    "title": "Help Manchas",
+                    "description": "Your donation will help keep Manchas supplied with the finest tuna and most entertaining toys.",
+                    "button": "Donate to Manchas"
+                },
+                "footer": {
+                    "love": "Made with 💖 for Manchas, the heart of ",
+                    "studio": "Third Strand Studio"
+                }
+            }
+        };
+
+        let currentLang = 'es';
+
+        function updateContent(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            const data = content[lang];
+            
+            // Update all text content
+            document.title = data.title;
+            document.querySelector('#nav-title').textContent = data.nav.title;
+            document.querySelector('#hero-title').textContent = data.hero.title;
+            document.querySelector('#hero-subtitle').textContent = data.hero.subtitle;
+            document.querySelector('#paradise-title').textContent = data.paradise.title;
+            document.querySelector('#paradise-desc').textContent = data.paradise.description;
+            document.querySelector('#paradise-location').textContent = data.paradise.location;
+            document.querySelector('#paradise-lifestyle').textContent = data.paradise.lifestyle;
+            document.querySelector('#adventures-title').textContent = data.adventures.title;
+            
+            // Update adventures list
+            const adventuresList = document.querySelector('#adventures-list');
+            adventuresList.innerHTML = data.adventures.items.map(item => 
+                `<li>${item}</li>`
+            ).join('');
+            
+            // Update gallery
+            document.querySelector('#gallery-title').textContent = data.gallery.title;
+            const galleryItems = document.querySelectorAll('.gallery-caption');
+            galleryItems.forEach((item, index) => {
+                item.textContent = data.gallery.photos[index].caption;
+            });
+            
+            // Update fan club
+            document.querySelector('#fanclub-title').textContent = data.fanClub.title;
+            document.querySelector('#fanclub-desc').textContent = data.fanClub.description;
+            document.querySelector('#fanclub-subtitle').textContent = data.fanClub.subtitle;
+            
+            // Update footer
+            document.querySelector('#footer-love').textContent = data.footer.love;
+            document.querySelector('#footer-studio').textContent = data.footer.studio;
+            
+            // Update the language button text
+            document.querySelector('#current-language').textContent = languageNames[lang];
+            
+            // Update vote section
+            document.querySelector('#vote-title').textContent = data.vote.title;
+            document.querySelector('#vote-desc').textContent = data.vote.description;
+            document.querySelector('#vote-button').textContent = data.vote.button;
+            document.querySelector('#modal-title').textContent = data.vote.popover.title;
+            document.querySelector('#modal-message').textContent = data.vote.popover.message;
+            document.querySelector('#modal-close').textContent = data.vote.popover.close;
+            
+            // Update support section
+            document.querySelector('#support-title').textContent = data.support.title;
+            document.querySelector('#support-desc').textContent = data.support.description;
+            document.querySelector('#support-button').textContent = data.support.button;
+        }
+
+        function toggleLanguageMenu() {
+            document.getElementById('language-menu').classList.toggle('hidden');
+        }
+
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('language-menu');
+            const langBtn = document.getElementById('language-btn');
+            if (!menu.contains(event.target) && !langBtn.contains(event.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+
+    <style>
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            max-width: 90%;
+            width: 400px;
+            text-align: center;
+            position: relative;
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+    <header class="bg-white bg-opacity-90 shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div id="nav-title" class="text-2xl font-bold text-gray-800"></div>
+            <div class="relative">
+                <button id="language-btn" onclick="toggleLanguageMenu()" class="flex items-center space-x-2 px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
+                    <span>🌐</span>
+                    <span id="current-language"></span>
+                </button>
+                <div id="language-menu" class="hidden absolute right-0 mt-2 w-48 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                    <div class="py-1">
+                        <button onclick="updateContent('es')" class="block w-full text-left px-4 py-2 hover:bg-gray-100">Español</button>
+                        <button onclick="updateContent('de')" class="block w-full text-left px-4 py-2 hover:bg-gray-100">Deutsch</button>
+                        <button onclick="updateContent('en')" class="block w-full text-left px-4 py-2 hover:bg-gray-100">English</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24 pb-12">
+        <!-- Hero Section -->
+        <section class="text-center mb-16">
+            <div class="bg-white rounded-lg shadow-xl p-8 mb-8">
+                <img src="/api/placeholder/400/300" alt="Manchas the cat" class="rounded-lg mx-auto mb-6 shadow-lg">
+                <h1 id="hero-title" class="text-4xl font-bold text-gray-800 mb-4"></h1>
+                <p id="hero-subtitle" class="text-xl text-gray-600"></p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="grid md:grid-cols-2 gap-8 mb-16">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 id="paradise-title" class="text-2xl font-bold text-gray-800 mb-4"></h2>
+                <p id="paradise-desc" class="text-gray-600 mb-4"></p>
+                <div class="flex items-center text-gray-500">
+                    <span id="paradise-location" class="mr-4"></span>
+                    <span id="paradise-lifestyle"></span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 id="adventures-title" class="text-2xl font-bold text-gray-800 mb-4"></h2>
+                <ul id="adventures-list" class="text-gray-600 space-y-3"></ul>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="mb-16">
+            <h2 id="gallery-title" class="text-3xl font-bold text-gray-800 mb-8 text-center"></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="Manchas relaxing" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="gallery-caption text-gray-600"></p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="Manchas in the lobby" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="gallery-caption text-gray-600"></p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="Manchas by the window" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="gallery-caption text-gray-600"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vote Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 text-center mb-16">
+            <h2 id="vote-title" class="text-3xl font-bold text-gray-800 mb-4"></h2>
+            <p id="vote-desc" class="text-gray-600 mb-6"></p>
+            <button id="vote-button" onclick="handleVote()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+            </button>
+        </section>
+
+        <!-- Thank You Modal -->
+        <div id="thank-you-modal" class="modal-overlay">
+            <div class="modal-content">
+                <h3 id="modal-title" class="text-2xl font-bold text-gray-800 mb-4"></h3>
+                <p id="modal-message" class="text-gray-600 mb-6"></p>
+                <button id="modal-close" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                </button>
+            </div>
+        </div>
+
+        <!-- Support Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 text-center mb-16">
+            <h2 id="support-title" class="text-3xl font-bold text-gray-800 mb-4"></h2>
+            <p id="support-desc" class="text-gray-600 mb-6"></p>
+            <a id="support-button" href="https://paypal.me/yourpaypallink" target="_blank" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+            </a>
+        </section>
+
+        <!-- Fan Club Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 text-center mb-16">
+            <h2 id="fanclub-title" class="text-3xl font-bold text-gray-800 mb-4"></h2>
+            <p id="fanclub-desc" class="text-gray-600 mb-6"></p>
+            <div class="inline-flex items-center space-x-4">
+                <span class="text-2xl">❤️</span>
+                <span id="fanclub-subtitle" class="text-xl font-semibold text-gray-700"></span>
+                <span class="text-2xl">🐾</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>
+                <span id="footer-love"></span>
+                <a href="https://www.thirdstrandstudio.com" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors" id="footer-studio"></a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize content with default language (Spanish)
+        function handleVote() {
+            const modal = document.querySelector('#thank-you-modal');
+            const voteButton = document.querySelector('#vote-button');
+            
+            modal.classList.add('active');
+            voteButton.disabled = true;
+            voteButton.classList.add('bg-gray-400');
+            voteButton.classList.remove('hover:bg-blue-600', 'bg-blue-500');
+
+            // Close modal when clicking outside or on close button
+            const closeModal = () => {
+                modal.classList.remove('active');
+            };
+
+            document.querySelector('#modal-close').onclick = closeModal;
+            modal.onclick = (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            };
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateContent('es');
+        });
+    </script>
+</body>
+</html>
